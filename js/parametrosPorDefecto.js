@@ -14,5 +14,22 @@ console.log (multi(6,3));
 // Si el usuario asigna valores se sobreescriben a los valores por defecto.
 
 
-// Con un operador ternario
+// Con un operador ternario:
+
+function multi(x,y) {
+  //si el tipo de dato y es igual a undefined
+  y = typeof y === "undefined" ? 5 : y;
+  x = typeof x === "undefined" ? 2 : x;
+  return x * y;
+}
+
+console.log (multi());
+
+// Una manera más sencilla de asignar valores por defecto:
+
+function datosPersona (nombre='null', apellido='null', tel='null') {
+  console.log (`${nombre} ${apellido} - ${tel}`);
+}
+
+datosPersona('carlos');
 

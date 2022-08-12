@@ -1,5 +1,6 @@
 // OPERADOR TERNARIO
-// El signo de interrogación opera como un if
+// El signo de interrogación (?) opera como un if 
+// Los dos puntos (:) operan como un else
 
 
 let edad = 18

@@ -163,11 +163,6 @@ console.log (names.slice(3,6));
 console.log (names.slice(1,-2));
 
 
-
-
-
-
-
 // Método splice. Se utiliza para trabajar con datos que están en medio de un array, podemos quitar, mover, reemplzar e incluso agregar nuevos elementos.
 // Modifica el array original
 
@@ -225,15 +220,23 @@ function returnValue(value, position) {
 
 numbers3.map(returnValue);
 
-// Método find.  Busca dentro de un array y retorna el valor del primer elemento del array que satisface el pedido de la función. Regresa el primer valor que sea true y se detiene.
+// Método filter. Permite generar un nuevo array en base a la función y su condición. Evalúa true o false, cuando el resultado a la condición sea true, ese dato pasará a formar el nuevo array filtrado.
 
-const animals2 = ['cat', 'dog', 'bird', 'fox']
+const numeros = [10, 13, 22, 57, 16, 11];
 
-const result2 = animals2.find ( (animal) => {
-  return animal.includes ('fox')
-})
+const numersoPares = numeros.filter ((elemento) => {
+  return elemento % 2 === 0;
+});
 
-console.log (result2);
+console.log (numersoPares);
+// numerosPares es un nuevo array que recogió aquellas posiciones que dieron como resultado true
+
+
+const numersoInpares = numeros.filter ((elemento) => {
+  return elemento % 2 === 1;
+});
+
+console.log (numersoInpares);
 
 //Veamos un ejemplo con un array de objetos:
 
@@ -266,32 +269,6 @@ const sagaRocky = [
     puntos: 6.7
   }
 ]
-
-const pelis2000 = sagaRocky.find ((objeto) => {
-  return objeto.age >= 2000;
-});
-console.log (pelis2000);
-
-
-// Método filter. Permite generar un nuevo array en base a la función y su condición. Evalúa true o false, cuando el resultado a la condición sea true, ese dato pasará a formar el nuevo array filtrado.
-
-const numeros = [10, 13, 22, 57, 16, 11];
-
-const numersoPares = numeros.filter ((elemento) => {
-  return elemento % 2 === 0;
-});
-
-console.log (numersoPares);
-// numerosPares es un nuevo array que recogió aquellas posiciones que dieron como resultado true
-
-
-const numersoInpares = numeros.filter ((elemento) => {
-  return elemento % 2 === 1;
-});
-
-console.log (numersoInpares);
-
-
 
 const obtenerPuntos = sagaRocky.filter ((elemento) => {
 return elemento.puntos > 7;
@@ -326,3 +303,35 @@ const thirdCase = englishWords.some ((word) => {
 });
 
 console.log (thirdCase);
+
+/* SPREAD
+Crea un nuevo array usando elementos de otros arrays existentes
+
+Lo único que debemos hacer es agregar tres puntos (...) antes de la variable o constante. 
+*/
+
+const nombres = ['Luciana', 'Carolina', 'Marta', 'Isabel', 'Josefina'];
+const apellidos = ['Lopez', 'Suarez', 'Martinez', 'Miguens'];
+const apodos = ['Luli', 'isa', 'Martica'];
+
+const arrayConSpread = [...nombres, ...apellidos];
+
+console.log (arrayConSpread);
+
+// Spread también nos puede servir para copiar un array en una nueva variable
+
+const copiaApodos = [...apodos];
+console.log (copiaApodos);
+// Se guarda en una nueva posición de la memoria
+
+// Spread también podría reemplazar a split
+
+// Separamos los caracteres con split
+let cadena = 'Ezequiel';
+const caracteres = cadena.split ('');
+console.log (caracteres);
+
+// Con spread tiene el mismo resultado cuando lo metemos dentro de un array
+let cadena2 = 'Ezequiel';
+const caracteres2 = [...cadena];
+console.log (caracteres);
