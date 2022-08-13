@@ -304,34 +304,3 @@ const thirdCase = englishWords.some ((word) => {
 
 console.log (thirdCase);
 
-/* SPREAD
-Crea un nuevo array usando elementos de otros arrays existentes
-
-Lo único que debemos hacer es agregar tres puntos (...) antes de la variable o constante. 
-*/
-
-const nombres = ['Luciana', 'Carolina', 'Marta', 'Isabel', 'Josefina'];
-const apellidos = ['Lopez', 'Suarez', 'Martinez', 'Miguens'];
-const apodos = ['Luli', 'isa', 'Martica'];
-
-const arrayConSpread = [...nombres, ...apellidos];
-
-console.log (arrayConSpread);
-
-// Spread también nos puede servir para copiar un array en una nueva variable
-
-const copiaApodos = [...apodos];
-console.log (copiaApodos);
-// Se guarda en una nueva posición de la memoria
-
-// Spread también podría reemplazar a split
-
-// Separamos los caracteres con split
-let cadena = 'Ezequiel';
-const caracteres = cadena.split ('');
-console.log (caracteres);
-
-// Con spread tiene el mismo resultado cuando lo metemos dentro de un array
-let cadena2 = 'Ezequiel';
-const caracteres2 = [...cadena];
-console.log (caracteres);
