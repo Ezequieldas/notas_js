@@ -52,7 +52,7 @@ console.log (objetoSpread);
 
 // La limitación es que no podríamos agregar otro objeto con los mismos valores porque se sobreescriben los del primero.
 
-// Otro uso podría ser obtener un array dentro de un objeto y convertirlo en un array nuevo por fuera del mismo.
+// Podemos obtener un array dentro de un objeto y convertirlo en un array nuevo por fuera del mismo.
 
 arrayFueraDelObjeto = [...cliente01.array];
 
