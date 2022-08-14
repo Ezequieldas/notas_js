@@ -86,3 +86,35 @@ console.log (compras[1].precio);
 let valorTotal = compras[0].precio + compras[1].precio + compras[2].precio;
 
 console.log (valorTotal)
+
+// Partes de los objetos:
+
+// Contenedor
+
+const persona = {
+  // Propiedades del objeto
+  nombre : 'Carlos',
+  apellido : 'Zarate',
+
+  // Métodos (funciones dentro del objeto)
+  sumar : (x,y) => {
+    return x + y;
+  },
+
+  // Los métodos dentro del objeto también funcionan sin : y => (shorthand sintax)
+  restar (x,y) {
+    return x - y;
+  }
+};
+
+// Invocar una propiedad
+console.log (persona.nombre);
+// Invocar un método (con () )
+console.log (persona.sumar(5,5));
+
+// Método sin : y sin => funciona igual
+console.log (persona.restar(8,5));
+
+
+
+

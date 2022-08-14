@@ -115,3 +115,5 @@ function algunosDatos({nombre, apellido, tel}) {
 
 // Llamamos a la función con la variable del objeto dentro
 algunosDatos(cliente04);
+
+
