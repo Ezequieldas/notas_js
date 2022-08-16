@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>DOM</title>
+</head>
+<body>
+  <h1 id="titulo" >DOCUMENT OBJET MODEL</h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dicta quae blanditiis doloremque consectetur velit quas odit, facere autem natus, mollitia nam ducimus quidem sit quaerat repellat eos totam ratione.</p>
+  <p id="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dicta quae blanditiis doloremque consectetur velit quas odit, facere autem natus, mollitia nam ducimus quidem sit quaerat repellat eos totam ratione.</p>
+  <img id="foto" src="https://www.latercera.com/resizer/UvfBPh1sqyoGpgeuWPdVqcZbmfU=/900x600/smart/cloudfront-us-east-1.images.arcpublishing.com/copesa/3T6LCQ24TJGTVOZTDHXWLQXGJM.jpg" alt="Gato" width="130" height="100">
+
+<script>
+
+  let nuevoTitulo = document.getElementById ('titulo');
+  nuevoTitulo.textContent = ('Cambiando el título con DOM');
+
+  let nuevoParrafo = document.getElementById ('texto');
+  nuevoParrafo.textContent = ('Hola mundo');
+
+  let nuevaImagen = document.getElementById ('foto');
+  nuevaImagen.src = ("https://cloudfront-us-east-1.images.arcpublishing.com/infobae/OF3SZKCXHZADLOGT3V5KFAXG4E.png");
+
+</script>
+
+</body>
+</html>
