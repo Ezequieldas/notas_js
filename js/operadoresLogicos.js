@@ -1,4 +1,12 @@
 /*
+
+= 1 igual es asignación
+== 2 iguales es comparación de valores
+=== 3 iguales es comparación de valores y tipo de dato
+
+*/
+
+/*
 && AND
 ------------
 true && true = true
@@ -28,8 +36,8 @@ console.log (misterio);
 
 No corre en orden de izquierda a derecha sino por jerarquía
 
-1. !
-2. &&
-3. ||
+1. !   NOT
+2. &&  AND
+3. ||  OR
 
 */

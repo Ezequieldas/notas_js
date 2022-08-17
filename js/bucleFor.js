@@ -1,13 +1,13 @@
-/*
-SINTAXIS
-Bucle for. Determinado
+/* BUCLE FOR
+Es un bucle determinado
 
+SINTAXIS
 for (inicio; condición; incremento); {
-    // lo que necesito que se repita
+  lo que necesito que se repita
 }
 */
 
-// Ejemplos
+// Ejemplos:
 
 for (let i = 0; i < 10; i+= 2) {
   console.log ('Hello world ' + i)
@@ -126,7 +126,7 @@ for (let i = 0; i <= 10 ; i++) {
 
 
 // For of. Nuevo en Javascript. Sirve para recorrer objetos iterables como cadenas de texto o arrays. Ejemplo:
-let cadena = 'Hola mundo'
+let cadena = 'Hello world'
 let miArray2 =  ['cat', 'dog', 'bird', 'spider', 'turtle']
 
 // For of en un array
@@ -197,7 +197,12 @@ for (const key in ticket003) {
   console.log (key)
 }
 
-// Acceder a los valores
+// Acceder a los valores es necesario usar notación de corchetes [key]
 for (const key in ticket003) {
-  console.log (ticket003[key])
+  console.log (ticket003[key]);
+}
+
+// Mostremos las propiedades y valores en una cadena de texto con backticks:
+for (const key in ticket003) {
+  console.log (`Key: ${key} - Value: ${ticket003[key]}`);
 }

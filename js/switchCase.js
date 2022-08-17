@@ -1,3 +1,6 @@
+// SWITCH CASE
+
+// DÍAS DE LA SEMANA
 day = 4;
 
 switch (day) {
@@ -32,3 +35,5 @@ switch (day) {
   default:
     console.log ("Is not a day")
 }
+
+// Puede ser una buena alternativa para evitar muchos if else anidados
