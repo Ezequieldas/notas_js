@@ -197,7 +197,7 @@ console.log (a);
 // Método forEach. Mostrar o traer el elemento o su índice.
 
 function returnValues(value, position) {  
-  console.log (`${value} = ${position}`)
+  console.log (`El nombre ${value} está en la posición ${position}`)
 }
 
 names.forEach(returnValues);

@@ -30,12 +30,12 @@ const cliente03 = {
   nombre: 'Jorge',
   apellido: 'Ochoa',
   calle: 'Paseo Colon 1540',
-  loaclidad: 'Centro',
+  localidad: 'Centro',
   telefono: 1586902510
 }
 
 const {nombre: nombre3, apellido: apellido3} = cliente03;
-// Debemos asignar con qué key del objeto queremos que se guarde el valro de la variable
+// Debemos asignar con qué key del objeto queremos que se guarde el valor de la variable si las vamos a renombrar
 
 console.log (nombre3);
 console.log (apellido3);
