@@ -85,7 +85,7 @@ function resta (x,y) {
   return x - y;
 }
 
-function suma (x,y) {
+function suma2 (x,y) {
   return x + y;
 }
 
@@ -158,7 +158,7 @@ function multiplicaPor(num) { //Ahora qué hago?
   }
 }
 
-const dameUnNumero = multiplicaPor(2); // Creamos una const que va a alojar la función y le pasamos el valor que falta (otroNumero)
+export const dameUnNumero = multiplicaPor(2); // Creamos una const que va a alojar la función y le pasamos el valor que falta (otroNumero)
 
 console.log (dameUnNumero(9));
 

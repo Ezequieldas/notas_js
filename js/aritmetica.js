@@ -52,3 +52,21 @@ console.log(a);
 
 a **= 5; //a = a ** 5; toma el valor de la variable y lo potencia con el segundo número
 console.log(a);
+
+
+
+
+// Función exportada a modulos.js. Englobamos dos funciones en este archivo y los exportamos como un solo objeto.
+
+function sumar(a,b) {
+  return a+b
+}
+
+function restar(a,b) {
+  return a-b
+}
+
+export const aritmetica = {
+sumar,
+restar
+};
