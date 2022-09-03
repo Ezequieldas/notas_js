@@ -4,7 +4,7 @@
 const devolverCuadrados = (arr = undefined) => {
   if (arr === undefined) return console.warn ("no ingresaste un arreglo de números");
 
-  if (!arr instanceof Array) return console.error ("El valor que ingresaste no es un arreglo");
+  if (!(arr instanceof Array)) return console.error ("El valor que ingresaste no es un arreglo");
 
   if (arr.length === 0) return console.warn ("Ingresaste un array vacío");
 
@@ -25,7 +25,7 @@ devolverCuadrados([2,3,4]);
 const arrayMinMax = (array = undefined) => {
   if (array === undefined) return console.warn ("no ingresaste un arreglo de números");
 
-  if (!array instanceof Array) return console.error ("El valor que ingresaste no es un arreglo");
+  if (!(array instanceof Array)) return console.error ("El valor que ingresaste no es un arreglo");
 
   if (array.length === 0) return console.warn ("Ingresaste un array vacío");
 
@@ -46,7 +46,7 @@ arrayMinMax([2,-3,8,10]);
 const arrayParesImpares = (array = undefined) => {
   if (array === undefined) return console.warn ("no ingresaste un arreglo de números");
 
-  if (!array instanceof Array) return console.error ("El valor que ingresaste no es un arreglo");
+  if (!(array instanceof Array)) return console.error ("El valor que ingresaste no es un arreglo");
 
   if (array.length === 0) return console.warn ("Ingresaste un array vacío");
 

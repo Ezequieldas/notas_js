@@ -72,7 +72,7 @@ class SegundoPerro extends Animal {
 
 SegundoPerro.queEres();
 
-// Los setters y getters son métodos especiales que nos permiten establecer y obtener los valores de tributos de nuestra clase
+// Los setters y getters son métodos especiales que nos permiten establecer y obtener valores para atributos de nuestra clase
 
 class TercerPerro extends Animal {
   constructor(nombre, genero, raza){

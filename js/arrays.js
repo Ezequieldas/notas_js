@@ -56,33 +56,6 @@ console.log (animals[3][1][0]);
 
 //MÉTODOS
 
-// Método push. Agrega elementos al final del array
-
-let fruits = ['apple', 'pineapple', 'blueberry', 'orange'];
-console.log (fruits);
-
-fruits.push ('pear', 'tangerine');
-console.log (fruits);
-
-// El método push además de agregar elementos retorna la cantidad de elementos nuevos que hay. Por ejemplo si colocamos el resultado dentro de una variable.
-
-let large = fruits.push ();
-console.log (large);
-
-// Método pop. Elimina el último elemento del array
-
-let fruitsPop = fruits.pop ();
-
-// Accedo al array con el último elemento borrado
-console.log (fruits);
-
-// Accedo al elemento borrado guardado en una variable nueva
-console.log (fruitsPop);
-
-// Cada vez que invoque el método pop volverá a quitar el último elemento del array
-fruits.pop ();
-console.log (fruits);
-
 // Método unshift. Agregar elementos al array desde el comienzo
 fruits.unshift ('Avocado');
 console.log (fruits);
@@ -143,26 +116,6 @@ console.log (names.includes('Anna', 5));
 
 console.log (names.reverse());
 
-
-// Método join. Devuelve el contenido del array en strings.
-
-console.log (numbers.join());
-
-// Por defecto devuelve los elementos separados por comas, pero también se puede asignar otro símbolo o simplemente un espacio
-
-console.log (numbers.join(' '));
-console.log (numbers.join('. '));
-
-// Método slice. Crea un nuevo array tomando una porción del array que usamos o pasamos. Debemos indicar índice donde comenzar e índice dónde terminar de cortar +1.
-// No modifica el original
-
-console.log (names.slice(0,3));
-console.log (names.slice(3,6));
-
-//Con negativos es posible contar de atrás para adelante
-console.log (names.slice(1,-2));
-
-
 // Método splice. Se utiliza para trabajar con datos que están en medio de un array, podemos quitar, mover, reemplzar e incluso agregar nuevos elementos.
 // Modifica el array original
 
@@ -219,62 +172,6 @@ function returnValue(value, position) {
 }
 
 numbers3.map(returnValue);
-
-// Método filter. Permite generar un nuevo array en base a la función y su condición. Evalúa true o false, cuando el resultado a la condición sea true, ese dato pasará a formar el nuevo array filtrado.
-
-const numeros = [10, 13, 22, 57, 16, 11];
-
-const numersoPares = numeros.filter ((elemento) => {
-  return elemento % 2 === 0;
-});
-
-console.log (numersoPares);
-// numerosPares es un nuevo array que recogió aquellas posiciones que dieron como resultado true
-
-
-const numersoInpares = numeros.filter ((elemento) => {
-  return elemento % 2 === 1;
-});
-
-console.log (numersoInpares);
-
-//Veamos un ejemplo con un array de objetos:
-
-const sagaRocky = [
-  {
-    titulo: "Rocky I",
-    age: 1990,
-    puntos: 7.8
-  },
-  {
-    titulo: "Rocky II",
-    age: 1994,
-    puntos: 6.9
-  },
-  {
-    titulo: "Rocky III",
-    age: 1998,
-    puntos: 5.8
-
-  },
-  {
-    titulo: "Rocky IV",
-    age: 2000,
-    puntos: 5.5
-
-  },
-  {
-    titulo: "Rocky V",
-    age: 2004,
-    puntos: 6.7
-  }
-]
-
-const obtenerPuntos = sagaRocky.filter ((elemento) => {
-return elemento.puntos > 7;
-});
-
-console.log (obtenerPuntos);
 
 // Método some. Con que un solo valor devuelva true, entonces regresa true.
 
