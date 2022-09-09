@@ -1,0 +1,108 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Async</title>
+</head>
+<body>
+
+  <h1>Asincronía en Javascript</h1>
+  
+  <script>
+/*
+    Procesamiento Single thread y Multi thread
+
+    Operaciones de CPU y operaciones de I / O (input(output))
+
+    Operaciones Concurrentes y Paralelas
+
+    Operaciones Bloqueantes y No Bloqueantes
+
+    Operaciones Síncronas o Asíncronas
+
+    Callstack = pila de tareas
+
+    ver latentflip.com
+*/
+
+/* Código Síncrono Bloqueante*/
+(() => {
+  // Primera ejecución
+  console.log ("Código Síncrono");
+  console.log ("Inicio");
+
+  //Quinta ejecución
+function dos() {
+  console.log ("Dos");
+}
+
+// Tercera ejecución
+function uno() {
+  console.log ("Uno");
+  // Cuarta ejecución (llama a la función dos)
+  dos();
+   // Sexta ejecución. Sale de la func
+  console.log ("Tres");
+}
+
+// Segunda ejecución (llama al a función uno)
+uno();
+  // Última ejecución
+console.log("Fin")
+})();
+
+console.log("*****************");
+
+
+/*Código Asíncrono No bloqueante*/
+
+(() => {
+  // Primera ejecución
+  console.log ("Código Síncrono");
+  console.log ("Inicio");
+
+  //Cuarta ejecución
+function dos() {
+    // setTimeout demora el pedido (última ejecución)
+  setTimeout(function(){
+    console.log ("Dos");
+  }, 1000);
+}
+
+function uno() {
+  // setTimeout demora el pedido (sale en 7ma)
+  setTimeout(function(){
+    console.log ("Uno");
+  }, 0);
+  // Tercera ejecución (llama a la función dos)
+  dos();
+   // Quinta ejecución. Sale de la func
+  console.log ("Tres");
+}
+
+// Segunda ejecución (llama al a función uno)
+uno();
+  // sexta ejecución
+console.log("Fin")
+})();
+
+/*
+Javascript usa un modelo asíncrono y no bloqueante, con un loop de eventos implementado en un solo hilo (single thread) para operaciones de entrada y salida (input/output)
+*/
+
+    // console.log("inicio")
+    // setTimeout(() => {
+    //   console.log("Ejecutando un setTimeOut, esto se ejecuta una sola vez");
+    // }, 3000);
+ 
+    // setInterval(() => {
+    //   console.log(new Date().toLocaleTimeString());
+    // }, 10000);
+  
+  </script>
+</body>
+</html>

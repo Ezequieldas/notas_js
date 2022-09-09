@@ -22,7 +22,7 @@ console.log (daysOfWeek);
 
 daysOfWeek[10] = 'Sunday';
 
-// Se puede crear una posición nueva así no sea consecutiva. No es recomendable
+// Se puede crear una posición nueva así no sea consecutiva. No es recomendable porque automáticamente crea posiciones vacías "undefined".
 console.log (daysOfWeek);
 
 
@@ -35,6 +35,10 @@ daysOfWeek2[daysOfWeek2.length] = 'Saturday';
 console.log (daysOfWeek2);
 
 // Array dentro de otro array
+
+let numbers2 = [2,3,5,[1,2,3],8,9]
+
+// Array dentro de otro array (dentro de una variable)
 
 let domesticAnimals = ['cat', 'dog', 'turtle'];
 
@@ -55,19 +59,6 @@ console.log (animals[3][1][0]);
 // Se puede acceder a tantos niveles, como niveles de profundidad haya
 
 //MÉTODOS
-
-// Método unshift. Agregar elementos al array desde el comienzo
-fruits.unshift ('Avocado');
-console.log (fruits);
-
-// Método shift. Quita el primer elemento del array
-fruits.shift ();
-console.log (fruits);
-
-// Dentro de una variable también podemos ver lo que eliminó shift
-let fruitsShift = fruits.shift ();
-console.log (fruitsShift);
-console.log (fruits);
 
 // Método concat. Unir dos arrays en uno solo
 
