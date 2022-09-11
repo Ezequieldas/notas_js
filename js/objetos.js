@@ -115,6 +115,19 @@ console.log (persona.sumar(5,5));
 // Método sin : y sin => funciona igual
 console.log (persona.restar(8,5));
 
+let obj = {
+  nombre: 'JuanDC',
+  edad: 20,
+  hobbie: 'enseñar',
+};
+
+function showElement(obj) {
+  return Object.entries(obj).forEach((element) => {
+    console.log(element);
+  });
+}
+
+showElement(obj);
 
 
 

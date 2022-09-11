@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <title>Test</title>
+  </head>
+  <body>
+    <div class="container py-2">
+      <h3 class="lead" >Formulario de vehiculos</h3>
+      <form>
+        <input id="marca" type="text" placeholder="Ingresa la marca" class="form-control" />
+        <input id="modelo" type="text" placeholder="Ingresa el modelo" class="form-control" />
+        <input id="annio" type="text" placeholder="Ingresa el año" class="form-control" />
+        <button id="boton" class="btn btn-success" type="reset" onclick="capturar();" >Agregar</button>
+      </form>
+    </div>
+
+    <div class="container" >
+      <table class="table" id="tabla" >
+        <thead class="thead-inverse" >
+          <tr>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Año</th>
+          </tr>
+        </thead>
+        <tbody>
+          <td></td>
+          <td></td>
+        </tbody>
+      </table>
+    </div>
+
+    <script src="./challengeObjectConstructor.js">
+    </script>
+  </body>
+</html>

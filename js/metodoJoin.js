@@ -1,4 +1,9 @@
 // Método join. Devuelve el contenido del array en strings.
+let numbers = [1, 2, 3, 4, 5];
+console.log (numbers.join(' , '));
+
+
+let names = ['John', 'Michael', 'Richard', 'Robert', 'Anna', 'Steven', 'Lucy'];
 
 console.log (numbers.join());
 
@@ -15,3 +20,4 @@ console.log (names.slice(3,6));
 
 //Con negativos es posible contar de atrás para adelante
 console.log (names.slice(1,-2));
+

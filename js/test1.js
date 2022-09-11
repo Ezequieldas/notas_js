@@ -18,40 +18,50 @@
 17- let num = 5;
 */
 
-op = 1.5 + 1.5 * 2;
-console.log (op)
+// op = 1.5 + 1.5 * 2;
+// console.log (op)
 
-op2 = (10 % 6) **2;
-console.log (op2)
+// op2 = (10 % 6) **2;
+// console.log (op2)
 
-op3 = (200 + 0 / 0);
-console.log (op3)
+// op3 = (200 + 0 / 0);
+// console.log (op3)
 
-let a = 3;
-let b = 5;
-let c = 'resultado';
-const YEAR = '2021';
+// let a = 3;
+// let b = 5;
+// let c = 'resultado';
+// const YEAR = '2021';
 
-console.log ('resultado');
+// console.log ('resultado');
 
-c = a + b
-console.log (c);
+// c = a + b
+// console.log (c);
 
-console.log (++c);
+// console.log (++c);
 
-c+=a
-console.log (c);
+// c+=a
+// console.log (c);
 
-resultado1 = b + '10'
-console.log (resultado1);
+// resultado1 = b + '10'
+// console.log (resultado1);
 
-console.log (a + 'JS');
+// console.log (a + 'JS');
 
-let covid19 = 'el año de la pandemia'
-let resultado = covid19 + YEAR;
-console.log (resultado);
+// let covid19 = 'el año de la pandemia'
+// let resultado = covid19 + YEAR;
+// console.log (resultado);
 
-console.log ('El año ' + (++YEAR) + ' seguro estaremos mejor');
+// console.log ('El año ' + (++YEAR) + ' seguro estaremos mejor');
+let obtenerSuma;
+
+    obtenerSuma = prompt("Cuánto es 2 + 2?");
+  if (obtenerSuma === "4") {
+    alert("Felicitaciones!")
+  } else {
+    alert("Refresca y vuelve a intentarlo");
+  };
+
+
 
 
 

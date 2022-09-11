@@ -1,12 +1,12 @@
 // Método find.  Busca dentro de un array y retorna el valor del primer elemento del array que satisface el pedido de la función. Regresa el primer valor que sea true y se detiene.
 
-const animals2 = ['cat', 'dog', 'bird', 'fox']
+const animals = ['cat', 'dog', 'bird', 'fox']
 
-const result2 = animals2.find ( (animal) => {
+const result = animals.find ( (animal) => {
   return animal.includes ('fox')
 })
 
-console.log (result2);
+console.log (result);
 
 //Veamos un ejemplo con un array de objetos:
 

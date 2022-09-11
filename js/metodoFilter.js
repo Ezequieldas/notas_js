@@ -1,5 +1,7 @@
 // Método filter. Permite generar un nuevo array en base a la función y su condición. Evalúa true o false, cuando el resultado a la condición sea true, ese dato pasará a formar el nuevo array filtrado.
 
+// Impoortante: no modifica el array original
+
 const numeros = [10, 13, 22, 57, 16, 11];
 
 const numerosPares = numeros.filter ((elemento) => {
