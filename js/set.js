@@ -3,7 +3,7 @@ Set es un nuevo tipo de estructura de datos en Javascript
 
 Una forma especial de objeto
 
-Es una forma filtrar elementos repetidos
+Es una forma filtrar elementos repetidos. Solo almacena elementos únicos
 
 */
 

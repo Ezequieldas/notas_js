@@ -4,23 +4,32 @@
   <title>DOM</title>
 </head>
 <body>
-  <h1 id="titulo" >DOCUMENT OBJET MODEL</h1>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dicta quae blanditiis doloremque consectetur velit quas odit, facere autem natus, mollitia nam ducimus quidem sit quaerat repellat eos totam ratione.</p>
-  <p id="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dicta quae blanditiis doloremque consectetur velit quas odit, facere autem natus, mollitia nam ducimus quidem sit quaerat repellat eos totam ratione.</p>
+  <h1 id="titulo" class="claseObtenidaConGet">DOCUMENT OBJET MODEL</h1>
+  <h2 id="titulo" class="claseObtenidaConGet">DOCUMENT OBJET MODEL</h2>
+
+  <p id="txt">Lorem ipsum dolor sit amet facere autem natus, mollitia nam ducimus quidem sit quaerat repellat eos.</p>
+  <p id="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dicta.</p>
+
+  <p id="texto2">sit amet consectetur adipisicing elit. Soluta dicta quae blanditiis doloremque consectetur velit quas odit, mollitia ione.</p>
+
+  <p id="innerTXT" >Cupidatat enim magna veniam officia id elit eu qui deserunt. at amet officia. Et aliqua elit enim voluptate occaecat sit consequat ut est.</p>
+
   <img id="foto" src="https://www.latercera.com/resizer/UvfBPh1sqyoGpgeuWPdVqcZbmfU=/900x600/smart/cloudfront-us-east-1.images.arcpublishing.com/copesa/3T6LCQ24TJGTVOZTDHXWLQXGJM.jpg" alt="Gato" width="130" height="100">
 
-<script>
+  <input type="text" placeholder="Ingrese su texto aquí">
+  <br>
+  <br>
 
-  let nuevoTitulo = document.getElementById ('titulo');
-  nuevoTitulo.textContent = ('Cambiando el título con DOM');
+  <input  id="calculo1" placeholder="Ingrese su texto aquí">
 
-  let nuevoParrafo = document.getElementById ('texto');
-  nuevoParrafo.textContent = ('Hola mundo');
+  <input id="calculo2" placeholder="Ingrese su texto aquí">
 
-  let nuevaImagen = document.getElementById ('foto');
-  nuevaImagen.src = ("https://cloudfront-us-east-1.images.arcpublishing.com/infobae/OF3SZKCXHZADLOGT3V5KFAXG4E.png");
+  <button id="btnCalcular" onclick="btnOnClick()">Calcular</button>
 
-</script>
+  <p id="result" ></p>
+
+  
+<script src="./escuchandoEventos.js"></script>
 
 </body>
 </html>
