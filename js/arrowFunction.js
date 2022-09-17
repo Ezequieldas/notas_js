@@ -22,7 +22,7 @@ const funcionSimple = () => console.log ('Esto es posible porque solo contiene u
 funcionSimple ();
 //Nos ahorramos las llaves
 
-//Si la funcion va a recibir un único parámetro no es necesario usar los ()
+//Si la funcion va a recibir un único parámetro no es necesario usar los () ni return
 const funcionEsperaParam = texto => console.log (texto);
 funcionEsperaParam ('Pasamos un argumento a la función flecha');
 

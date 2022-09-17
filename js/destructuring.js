@@ -1,5 +1,5 @@
 /* Destructuring 
-Asignar variables a posicones de un array creado
+Asignar variables a posiciones de un array o un objeto creado
 */
 
 // Destructuring en arrays
@@ -27,18 +27,19 @@ console.log (telefono2);
 
 // Destructuring en objetos
 const cliente03 = {
-  nombre: 'Jorge',
-  apellido: 'Ochoa',
-  calle: 'Paseo Colon 1540',
-  localidad: 'Centro',
-  telefono: 1586902510
+  a: 'Ezequiel',
+  b: 'Das',
+  c: 'Av Rivadavia 1540',
+  d: 'Centro',
+  e: 1586902510
 }
 
-const {nombre: nombre3, apellido: apellido3} = cliente03;
-// Debemos asignar con qué key del objeto queremos que se guarde el valor de la variable si las vamos a renombrar
+const {c: address, a: names, b: lastname} = cliente03;
+// Podemos asignar con qué key del objeto queremos que se guarde el valor de la variable sin importar el orden
 
-console.log (nombre3);
-console.log (apellido3);
+console.log (names);
+console.log (lastname);
+console.log (address);
 
 const {telefono3} = cliente03
 

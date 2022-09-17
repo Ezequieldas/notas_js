@@ -20,6 +20,15 @@ console.log (fraseConComillas);
 fraseConComillas = "Este es un string con 'comillas simples'";
 console.log (fraseConComillas);
 
-//Backticks
+//Template strings: uso de Backticks para incluir variables en la misma sintaxis
 
 console.log (`El apellido es: ${apellido} y su nombre es ${nombre}`);
+
+// Las template strings también incorporan el salto de linea
+
+console.log (
+  `
+  ${apellido} está en una linea
+  ${nombre} está en otra linea diferente
+  `
+  );

@@ -1,4 +1,15 @@
 
+/*
+
+API - Aplication Programming Interface
+
+DOM - Document Object Model
+
+Manipulación de HTML mediante JS
+
+*/
+
+
 
   // Modificar el texto original de HTML
   let nuevoTitulo = document.getElementById ('titulo');
@@ -69,5 +80,3 @@
    console.log(img);
 
    texto.append(img);
-
-   q

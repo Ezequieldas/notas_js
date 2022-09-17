@@ -1,5 +1,7 @@
 /*
 Resuelve algunos problemas de los callbacks
+
+
 */ 
 
 function cuadradoPromise(value) {

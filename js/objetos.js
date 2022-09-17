@@ -129,5 +129,15 @@ function showElement(obj) {
 
 showElement(obj);
 
+// Objects literals - Cuando el parámetro es el mismo que la variable no es necesario repetirlo
 
+function newUser(user, age, country) {
+  return {
+    user,
+    age,
+    country
+  }
+}
+
+console.log(newUser('Ezequiel', 30, 'AR'));
 
