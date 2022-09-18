@@ -7,8 +7,8 @@ Es una forma filtrar elementos repetidos. Solo almacena elementos únicos
 
 */
 
-const set = new Set ([1,2,2,3,3,true,true,,false,{},{}]);
-// No aplica a objetos, porque we entiende que son diferentes
+const set = new Set ([1,2,2,3,3,true,true,false,{},{}]);
+// No aplica a objetos, porque se entiende que de por sí ya son diferentes entre sí
 
 console.log(set);
 

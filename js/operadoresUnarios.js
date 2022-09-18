@@ -19,3 +19,13 @@ console.log (opUnario);
 
 console.log (--opUnario);
 console.log (opUnario);
+
+/*
+Desde ECMAS7
+
+** potencia de un número
+
+*/
+
+let potencia = 3**4;
+console.log(potencia)

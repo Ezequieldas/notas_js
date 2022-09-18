@@ -1,9 +1,24 @@
 /*
-Resuelve algunos problemas de los callbacks
-
+Resuelve algunos problemas de los callbacks al incorporar el método then
 
 */ 
 
+// Ejemplo simple con una variable
+const helloPromise = () => {
+  return new Promise ((resolve,reject) => {
+    if (true){
+      resolve ('Good!');
+    } else {
+      reject ('Bad');
+    }
+  });
+};
+
+helloPromise()
+.then (response => console.log(response));
+
+
+// Función para reemplazar callbacks
 function cuadradoPromise(value) {
   if (typeof value !== "number") return Promise.reject(`Error: el valor "${value}" ingresado no es número`);
   return new Promise((resolve, reject) =>{
@@ -16,7 +31,7 @@ function cuadradoPromise(value) {
   });
 }
 
-cuadradoPromise(0)
+cuadradoPromise(1)
 .then(obj => {
   // console.log(obj);
   console.log(`Promise: ${obj.value}, ${obj.result}`);
@@ -43,4 +58,16 @@ cuadradoPromise(0)
   console.log(`End Promise`);
 
 })
-.catch(err => console.error(err));
+
+// ECMAS9 incorpora finally. Ejecutar una acción cuando la promesa terminó el proceso
+//finally(() => console.log('finally'));
+
+// allSetled devuelve promesas en formato objeto
+
+const promise1 = new Promise ((resolve,reject) => reject('Reject'));
+const promise2 = new Promise ((resolve,reject) => resolve('Resolve'));
+const promise3 = new Promise ((resolve,reject) => resolve('Resolve 2'));
+
+Promise.allSettled([promise1, promise2, promise3])
+  .then(response => console.log(response));
+

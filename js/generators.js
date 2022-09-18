@@ -1,13 +1,13 @@
 /*
+function* es una clave para determinar el uso de generator
+
 Nos permiten generar mecanismos asíncronos mediante la palabra reservada: yield
 
 */
 
 function* iterable() {
   yield "Hello";
-  console.log("Hello console");
   yield "Hello again";
-  console.log("More instruccions");
   yield "Hello again and again"
 };
 
@@ -17,6 +17,8 @@ console.log(iterador.next());
 console.log(iterador.next());
 console.log(iterador.next());
 
+
+// En este ejemplo yield llamará a la función cuadrado y la ejecutará paso por paso
 
 function cuadrado(valor) {
   setTimeout(() => {
@@ -34,8 +36,10 @@ function* generador(){
   console.log("Termina generator")
 };
 
-let gen = generador();
-
-for (let y of gen){
-  console.log(y);
-}
+let generatorCuadrado = generador(2);
+console.log(generatorCuadrado.next());
+console.log(generatorCuadrado.next());
+console.log(generatorCuadrado.next());
+console.log(generatorCuadrado.next());
+console.log(generatorCuadrado.next());
+console.log(generatorCuadrado.next());

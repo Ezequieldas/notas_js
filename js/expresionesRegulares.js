@@ -38,3 +38,14 @@ console.log (expresionReg2.exec(cadena));
 // También podemos utilizar expresiones regulares sin la función constructora. Tendrá el mismo efecto.
  let expresionReg3 = /Lorem/ig;
 
+
+
+// Fórmula para encontrar términos con matchAll y exp reg
+ const regex = /\b(White)+\b/g;
+
+ const colors = 'Red, Green, Yellow, Black, White, Grey';
+
+ for (const match of colors.matchAll(regex)){
+  console.log(match);
+ };
+ 

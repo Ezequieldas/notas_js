@@ -1,6 +1,23 @@
-/* Destructuring 
-Asignar variables a posiciones de un array o un objeto creado
+/* Destructuring
+
+Desestructurar elementos de los objetos
+
 */
+ const person = {
+  name: "Ezequiel",
+  lastnam: "Das",
+  age: 32
+ }
+
+ // Antes de ECMAS6
+console.log(person.name, person.lastnam)
+
+// Con ECMAS6
+let {name, lastnam} = person;
+console.log(name, lastnam)
+
+
+//Asignar variables a posiciones de un array o un objeto creado
 
 // Destructuring en arrays
 const cliente01 = ['Lucas', 'Martinez', 'Av Rivadavia 2020', 'Flores', '1530507080'];
