@@ -9,10 +9,13 @@ const countries = {
   AR: 'Argentina'
 }
 
-console.log(Object.entries(countries));
+const entriesCountries = Object.entries(countries);
+console.log(entriesCountries);
+ // Para obtener la cantidad de elementos
+ console.log(entriesCountries.length)
 
 /*
- * fromEntries se incorpora en ECMAS10. transforma arreglos en objetos
+ * fromEntries se incorpora en ECMAS10. transforma varios arreglos en un objeto
  */
 
 const entries = new Map ([["name", "Ezequiel"], ["age", 34]]);

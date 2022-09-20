@@ -6,16 +6,16 @@ Resuelve algunos problemas de los callbacks al incorporar el método then
 // Ejemplo simple con una variable
 const helloPromise = () => {
   return new Promise ((resolve,reject) => {
-    if (true){
-      resolve ('Good!');
-    } else {
-      reject ('Bad');
-    }
+    (true)
+      ? resolve ('Good!')
+      : reject (new Error('Bad'));
   });
 };
 
 helloPromise()
-.then (response => console.log(response));
+.then (response => console.log(response))
+.catch (error => console.log(error))
+.finally(()=> console.log('finalizó'))
 
 
 // Función para reemplazar callbacks
@@ -61,13 +61,3 @@ cuadradoPromise(1)
 
 // ECMAS9 incorpora finally. Ejecutar una acción cuando la promesa terminó el proceso
 //finally(() => console.log('finally'));
-
-// allSetled devuelve promesas en formato objeto
-
-const promise1 = new Promise ((resolve,reject) => reject('Reject'));
-const promise2 = new Promise ((resolve,reject) => resolve('Resolve'));
-const promise3 = new Promise ((resolve,reject) => resolve('Resolve 2'));
-
-Promise.allSettled([promise1, promise2, promise3])
-  .then(response => console.log(response));
-

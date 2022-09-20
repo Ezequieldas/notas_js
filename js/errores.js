@@ -42,6 +42,7 @@ try {
     else {
       console.log (numero*numero)
     }
+    // Con ES10 (error) es opcional
 } catch (error) {
   console.log (`Lo siento, se ha producido el siguiente problema. ${error}`)
 } finally {
