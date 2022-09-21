@@ -14,6 +14,19 @@
   
   <script>
 /*
+
+    Conceptos: 
+
+    Bloqueante: una tarea no devuelve el control hasta que no se ha completado.
+
+    No bloqueante: Una tarea se devuelve inmediatamente con independencia del resultado. Si se completó devuelve los datos, si no, da error.
+
+    Síncrono: Las tareas se ejecutan de forma secuencial, se  debe esperar a que se complete para continuar con la siguiente tarea.
+
+    Asíncrono: las tareas pueden realizarse más tarde, lo que hace que una respuesta sea procesada en diferido
+
+    //////////////////////
+
     Procesamiento Single thread y Multi thread
 
     Operaciones de CPU y operaciones de I / O (input(output))
@@ -92,6 +105,12 @@ console.log("Fin")
 
 /*
 Javascript usa un modelo asíncrono y no bloqueante, con un loop de eventos implementado en un solo hilo (single thread) para operaciones de entrada y salida (input/output)
+
+Utiliza un modelo de concurrencia basado en un "loop de eventos"
+
+¿Que es EventLoop?
+El bucle de eventos es un patrón de diseño que espera y distribuye eventos o mensajes en un programa
+
 */
 
     // console.log("inicio")

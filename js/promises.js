@@ -15,7 +15,25 @@ const helloPromise = () => {
 helloPromise()
 .then (response => console.log(response))
 .catch (error => console.log(error))
-.finally(()=> console.log('finalizó'))
+.finally(()=> console.log('finalizó'));
+
+
+// Otro ejemplo. Contar vacas
+const cows = 8;
+
+const countCows = new Promise(function(resolve,reject){
+  if(cows > 10){
+    resolve(`We have ${cows} cows. It's enough`)
+  } else {
+    reject (`We have ${cows} cows. It's not enough`)
+  }
+});
+
+countCows.then((result) => {
+  console.log(result);
+}).catch((error) =>{
+  console.log(error)
+}).finally(()=> console.log('Finish'));
 
 
 // Función para reemplazar callbacks
