@@ -5,6 +5,10 @@ API - Aplication Programming Interface
 
 DOM - Document Object Model
 
+BOM - Browser Object Model
+
+CSSOM - CSS Object Model
+
 Manipulación de HTML mediante JS
 
 */

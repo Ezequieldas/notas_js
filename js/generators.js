@@ -1,7 +1,8 @@
 /*
-function* es una clave para determinar el uso de generator
 
-Nos permiten generar mecanismos asíncronos mediante la palabra reservada: yield
+generator es una herramienta junto con promises / async await / para trabajar JS en asincronía
+
+la clave para determinar el uso de generator es function* que nos permiten generar mecanismos asíncronos mediante la palabra reservada: yield
 
 */
 
@@ -12,6 +13,7 @@ function* iterable() {
 };
 
 let iterador = iterable();
+// Con cada yield y next podemos controlar cuantas veces queremos que se ejecute 
 console.log(iterador.next());
 console.log(iterador.next());
 console.log(iterador.next());
@@ -31,8 +33,6 @@ function* generador(){
   yield cuadrado(0);
   yield cuadrado(1);
   yield cuadrado(2);
-  yield cuadrado(3);
-  yield cuadrado(4);
   console.log("Termina generator")
 };
 
@@ -41,5 +41,15 @@ console.log(generatorCuadrado.next());
 console.log(generatorCuadrado.next());
 console.log(generatorCuadrado.next());
 console.log(generatorCuadrado.next());
-console.log(generatorCuadrado.next());
-console.log(generatorCuadrado.next());
+
+// Probemos el uso de generators con un array
+function* iterate (array) {
+  for (const value of array) {
+    yield value
+  }
+};
+
+const it = iterate(['Ezequiel', 'Hernán', 'Alma', 'Andrea']);
+console.log(it.next().value);
+console.log(it.next().value);
+console.log(it.next().value);
