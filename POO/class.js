@@ -1,11 +1,14 @@
 // CLASES
 
 /*
+
 Azucar sintáctico de Javascript 
-Basado en clases (como otros lenguajes de programación) pero convertido a prototipos
+
+Las clases realmente son prototipos pero con la sintaxis de una clase (similar a otros lenguajes de programación como Java o php)
 */
 
-// Las clases no reciben parámetros
+// primer elemento: palabra reservada class
+// (las clases no reciben parámetros)
 class Animal { 
   // Lo hacen a través de un constructor. Es un método especial que se ejecuta al momento de instanciar la clase.
   constructor (nombre, genero){
@@ -15,7 +18,7 @@ class Animal {
   }
   //Métodos. Si pueden recibir parámetros
   sonar(){
-    console.log(`Soy ${this.nombre} y hago sonidos`)
+    console.log(`Soy ${this.nombre}`)
   };
   // Dentro de una clase sí podemos dejar los métodos dentro
   saludar (){
@@ -27,7 +30,7 @@ class Animal {
 class Perro extends Animal {
   constructor(nombre, genero, tamanio){
   super(nombre, genero);
-  this.tamanio // propiedad exclusiva de la class Perro
+  this.tamanio // ya es propiedad exclusiva de la class Perro, pero  su vez Perro recibe todas las propiedades de la clase Animal
   }
 
   sonar (){ // El método heredado se puede traer y modificar
@@ -45,10 +48,10 @@ const scooby = new Perro ("Scooby", "macho", "gigante");
 console.log (minnie);
 console.log (scooby);
 
-// El prototipo de minnie es Object (el más primitivo). No viene de ninguna clase heredada
+// El prototipo de "minnie" es Object (el más primitivo). No viene de ninguna clase heredada
 minnie.saludar();
 minnie.sonar();
-// El prototipo de scooby es Animal / y luego Object (el más primitivo)
+// El prototipo de "scooby" es Animal / y luego Object (el más primitivo)
 scooby.saludar();
 scooby.sonar();
 scooby.ladrar(); 
