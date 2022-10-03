@@ -42,7 +42,7 @@ const json = {
 }
 */
 
-// Los métodos de JSON: PARSE y STRINGIFY
+// Los métodos de JSON: PARSE y STRINGIFY. Son métodos estáticos del prototipo json
 
 // parse convierte una notación de texto a Javascript
 

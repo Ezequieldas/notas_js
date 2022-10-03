@@ -1,5 +1,21 @@
-// Cursos
+// Comentarios
 
+class Comment {
+  constructor({ content, studentName, studentRole = "estudiante" }) {
+    this.content = content;
+    this.studentName = studentName;
+    this.studentRole = studentRole;
+    this.likes = 0;
+  }
+
+  publish() {
+    console.log(`${this.studentName} (${this.studentRole})`);
+    console.log(`${this.likes} likes`);
+    console.log(`${this.content}`);
+  }
+}
+
+// Cursos
 class Course {
   constructor({ name, classes = [], isFree = false, lang = "spanish" }) {
     this.name = name;
@@ -67,7 +83,7 @@ class Student {
     instagram,
     facebook,
     approvedCourses = [],
-    learningPaths = []
+    learningPaths = [],
   }) {
     this.name = name;
     this.email = email;
@@ -80,8 +96,17 @@ class Student {
     this.approvedCourses = approvedCourses;
     this.learningPaths = learningPaths;
   }
+
+  publishComment(commentContent){
+    const comment = new Comment({
+      content: commentContent,
+      studentName: this.name
+    });
+    comment.publish();
+  }
 }
 
+// Membresías
 class FreeStudent extends Student {
   constructor(props) {
     super(props);
@@ -121,6 +146,24 @@ class ExpertStudent extends Student {
   }
 }
 
+class TeacherStudent extends Student {
+  constructor(props) {
+    super(props);
+  }
+  approveCourse(newCourse) {
+    this.approvedCourses.push(newCourse);
+  }
+
+  publishComment(commentContent){
+    const comment = new Comment({
+      content: commentContent,
+      studentName: this.name,
+      studentRole: "profesor"
+    });
+    comment.publish();
+  }
+}
+
 const ezequiel = new ExpertStudent({
   name: "Ezequiel",
   username: "EzequielDas",
@@ -131,14 +174,23 @@ const hernan = new FreeStudent({
   name: "Hernan",
   username: "hernan",
   twitter: "her",
-
 });
 
-ezequiel.approveCourse(sql)
+ezequiel.approveCourse(sql);
 
 console.log(ezequiel);
 
-hernan.approveCourse(programacionBasica)
+hernan.approveCourse(programacionBasica);
 
 console.log(hernan);
 
+const andrea = new TeacherStudent({
+  name: "Andrea",
+  username: "andrea",
+  twitter: "andre",
+  likes: 100
+});
+
+hernan.publishComment("Gracias")
+
+andrea.publishComment("Hola")

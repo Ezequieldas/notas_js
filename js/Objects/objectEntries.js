@@ -1,5 +1,5 @@
 /*
- * Entries transforma el objeto en un arreglo por cada llave, valor
+ Object.entries es una propiedad estática del prototipo Object que transforma el objeto en un arreglo para cada llave, valor
  */
 
 const countries = {
