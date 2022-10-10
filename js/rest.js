@@ -1,6 +1,9 @@
-/* PARÁMETROS REST
-Tiene la capacidad de recibir una cantidad de datos indefinida dentro de un array 
-function (...parametro) {}
+/* 
+  PARÁMETROS REST
+
+  Tiene la capacidad de recibir una cantidad de datos indefinida dentro de un array 
+
+  function (...parametro) {}
 */
 
 // Comencemos con un ejemplo simple:
